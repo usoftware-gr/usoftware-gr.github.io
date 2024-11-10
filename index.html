@@ -32,7 +32,9 @@
         </nav>
 <div id="con">
         <div id="content">
-            
+            <div id="slide">
+              
+            </div>
         </div>
 
         
@@ -88,6 +90,20 @@ setTimeout(() => {
   splash.style.display = "none";
 }, "200");
 
+
     </script>
     
+
+<script>
+    const contentPage = document.getElementById('slide');
+
+fetch('slide.html')
+  .then(response => response.text())
+  .then(html => {
+    contentPage.innerHTML = html;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
     </html>
