@@ -9,6 +9,9 @@
     </head>
     <html>
         <body>
+          <div id="splash">
+            <div class="loader"></div>
+          </div>
         <nav>
             <div id="header_content">
               <img id="logo_img" src="img/logo.svg">
@@ -39,9 +42,53 @@
         </div>
         <script src="main.js"></script>
         <div id="color_mode_select">
-          <img onclick="dark_mode" src="img/dark.svg">
-          <img onclick="light_mode" src="img/light.svg">
+          <img id="moon" onclick="dark_mode()" src="img/dark.svg">
+          <img id="sun" onclick="light_mode()" src="img/light.svg">
         </div>
     </body>
+<script>
+  
+// 要素を取得
+const body = document.getElementsByTagName("html")[0];
+const li = document.getElementsByTagName("li")[0];
+const sun = document.getElementById("sun"); // IDで取得する
+const moon = document.getElementById("moon"); // IDで取得する
+
+// ローカルストレージからカラーモードを取得
+const colorMode = localStorage.getItem("color_mode");
+
+// カラーモードに応じてスタイルを変更
+if (colorMode === "dark") {
+  body.style.background = "#333";
+  header_content.style.background = "#333";
+  document.body.style.color = "#fff";
+  sun.style.display = "block";
+  moon.style.display = "none";
+  logo_img.src = "img/white_logo.svg";
+} else if (colorMode === "light") {
+  body.style.background = "#fff";
+  header_content.style.background = "#fff";
+  sun.style.display = "none";
+  moon.style.display = "block";
+  document.body.style.color = "#000";
+  logo_img.src = "img/logo.svg";
+} 
+else {
+  // 初期値の設定（例: lightモード）
+  localStorage.setItem("color_mode", "light");
+  body.style.background = "#fff";
+  header_content.style.background = "#fff";
+  document.body.style.color = "#000";
+  sun.style.display = "none";
+  moon.style.display = "block";
+  logo_img.src = "img/logo.svg";
+}
+
+header_sc.style.color = "#000";
+setTimeout(() => {
+  splash.style.display = "none";
+}, "200");
+
+    </script>
+    
     </html>
-</html>

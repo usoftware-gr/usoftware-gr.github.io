@@ -10,4 +10,33 @@ window.addEventListener('scroll', () => {
   }
 });
 
-function
+function dark_mode(){
+  const body = document.getElementsByTagName("html")[0];
+  const li = document.getElementsByTagName("li")[0];
+  const sun = document.getElementById("sun"); // IDで取得する
+  const moon = document.getElementById("moon"); // IDで取得する
+
+  body.style.background = "#333";
+  header_content.style.background = "#333";
+  document.body.style.color = "#fff";
+  sun.style.display = "block";
+  moon.style.display = "none";
+  logo_img.src = "img/white_logo.svg";
+  
+}
+
+function light_mode(){
+  const body = document.getElementsByTagName("html")[0];
+  const li = document.getElementsByTagName("li")[0];
+  const sun = document.getElementById("sun"); // IDで取得する
+  const moon = document.getElementById("moon"); // IDで取得する
+  
+  body.style.background = "#fff";
+  header_content.style.background = "#fff";
+  sun.style.display = "none";
+  moon.style.display = "block";
+  document.body.style.color = "#000";
+  logo_img.src = "img/logo.svg";
+}
+
+
