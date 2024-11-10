@@ -22,6 +22,7 @@ function dark_mode(){
   sun.style.display = "block";
   moon.style.display = "none";
   logo_img.src = "img/white_logo.svg";
+  localStorage.setItem("color_mode", "dark");
   
 }
 
@@ -37,6 +38,7 @@ function light_mode(){
   moon.style.display = "block";
   document.body.style.color = "#000";
   logo_img.src = "img/logo.svg";
+  localStorage.setItem("color_mode", "light");
 }
 
 
