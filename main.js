@@ -9,3 +9,5 @@ window.addEventListener('scroll', () => {
     header_sc.style.display = 'none';
   }
 });
+
+function
