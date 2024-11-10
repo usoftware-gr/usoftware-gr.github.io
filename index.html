@@ -8,14 +8,15 @@
         <link rel="stylesheet" type="text/css" href="fonts.css">
     </head>
         <body>
-          <div id="splash">
-            <div class="loader"></div>
-          </div>
+
         <nav>
             <div id="header_content">
-              <img id="logo_img" src="img/logo.svg">
+              <div id="logo" onclick="open_menu()">
+                <span id="menu_svg"></span>
+                     <img id="logo_img" src="img/logo.svg">
+                    </div>
                 <span>
-                <ul><li>Products</li><li>information</li><li></li></ul>
+                <ul id="link_content"><li>Products</li><li>information</li><li></li></ul>
             </span>
         </div>
 
@@ -32,21 +33,26 @@
         </nav>
 <div id="con">
         <div id="content">
-            <div id="slide">
-              
-            </div>
+            <div style="height:10vh;"></div>
+
         </div>
 
         
         <div id="mobile_content">
         </div>      
         </div>
-        <script src="main.js"></script>
+
         <div id="color_mode_select">
           <img id="moon" onclick="dark_mode()" src="img/dark.svg">
           <img id="sun" onclick="light_mode()" src="img/light.svg">
         </div>
+
+        <div style="display: none;" id="menu">
+  
+          <div id="link_content_menu"></div>
+      </div>
     </body>
+    <script src="main.js"></script>
 <script>
   
 // 要素を取得
@@ -60,50 +66,80 @@ const colorMode = localStorage.getItem("color_mode");
 
 // カラーモードに応じてスタイルを変更
 if (colorMode === "dark") {
+  const body = document.getElementsByTagName("html")[0];
+  const li = document.getElementsByTagName("li")[0];
+  const sun = document.getElementById("sun"); // IDで取得する
+  const moon = document.getElementById("moon"); // IDで取得する
+
   body.style.background = "#333";
   header_content.style.background = "#333";
   document.body.style.color = "#fff";
   sun.style.display = "block";
   moon.style.display = "none";
   logo_img.src = "img/white_logo.svg";
-} else if (colorMode === "light") {
+  localStorage.setItem("color_mode", "dark");
+  menu_svg.innerHTML = '<img style="vertical-align: 38%;margin-left: 20px; height:28px;" src="img/menu_white.svg">';
+
+  const allLinks = document.querySelectorAll('a');
+
+// 各 a タグのスタイルを変更
+allLinks.forEach(link => {
+  link.style.color = 'white';
+});
+
+menu.style.background = "#242424";
+
+
+  
+} 
+else if (colorMode === "light") {
+  const body = document.getElementsByTagName("html")[0];
+  const li = document.getElementsByTagName("li")[0];
+  const sun = document.getElementById("sun"); // IDで取得する
+  const moon = document.getElementById("moon"); // IDで取得する
   body.style.background = "#fff";
   header_content.style.background = "#fff";
   sun.style.display = "none";
   moon.style.display = "block";
   document.body.style.color = "#000";
   logo_img.src = "img/logo.svg";
+  localStorage.setItem("color_mode", "light");
+  menu_svg.innerHTML = '<img style="vertical-align: 38%;margin-left: 20px; height:28px;" src="img/menu.svg">';
+  const allLinks = document.querySelectorAll('a');
+  document.getElementById("menu").style.background = "#fff";
+
+// 各 a タグのスタイルを変更
+allLinks.forEach(link => {
+  link.style.color = '#000';
+});
+  
 } 
 else {
-  // 初期値の設定（例: lightモード）
-  localStorage.setItem("color_mode", "light");
+  const body = document.getElementsByTagName("html")[0];
+  const li = document.getElementsByTagName("li")[0];
+  const sun = document.getElementById("sun"); // IDで取得する
+  const moon = document.getElementById("moon"); // IDで取得する
   body.style.background = "#fff";
+  
   header_content.style.background = "#fff";
-  document.body.style.color = "#000";
   sun.style.display = "none";
   moon.style.display = "block";
+  document.body.style.color = "#000";
   logo_img.src = "img/logo.svg";
+  localStorage.setItem("color_mode", "light");
+  menu_svg.innerHTML = '<img style="vertical-align: 38%;margin-left: 20px; height:28px;" src="img/menu.svg">';
+  document.getElementById("menu").style.background = "#fff";
+  const allLinks = document.querySelectorAll('a');
+
+// 各 a タグのスタイルを変更
+allLinks.forEach(link => {
+  link.style.color = '#000';
+});
 }
 
 header_sc.style.color = "#000";
-setTimeout(() => {
-  splash.style.display = "none";
-}, "200");
-
 
     </script>
-    
+       
 
-<script>
-    const contentPage = document.getElementById('slide');
-
-fetch('slide.html')
-  .then(response => response.text())
-  .then(html => {
-    contentPage.innerHTML = html;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-</script>
     </html>

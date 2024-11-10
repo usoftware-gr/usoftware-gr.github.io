@@ -89,8 +89,7 @@ li:active{
 }
 
 a{
-    color: #292929;
-    
+    text-decoration: none;
 }
 
 #color_mode_select{
@@ -142,4 +141,53 @@ a{
     width: 100%;
     height: 100vh;
     
+}
+
+#logo{
+  display: inline-block;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+#logo:hover{
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #ddd;
+    background: #ffffff1a;
+    padding-top: 5px;
+    padding-right: 12px;
+    cursor: pointer;
+  }
+  
+
+
+
+#menu{
+  position: fixed;
+  padding: 32px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+  border-radius: 10px;
+  top: 78px;
+  z-index: 4;
+}
+
+@keyframes updown-anime {
+    0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    
+  
+    @keyframes downup-anime {
+        0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }   
 }
