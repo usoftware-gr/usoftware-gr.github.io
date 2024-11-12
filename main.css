@@ -1,3 +1,43 @@
+@media screen and (max-width: 800px) {
+  /* ここに横幅が767px以下の時に発動するスタイルを記述 */
+  
+  
+  #content{
+    display: none;
+  }
+  
+  #link_content{
+    display: none;
+  }
+
+  #mobile_content{
+    display: block;
+  }
+  }
+  
+  @media screen and (min-width: 800px) {
+  /* ここに横幅が767pxより大きい時に発動するスタイルを記述 */
+  
+  
+  #content{
+    display: block;
+  }
+  
+  #mobile_content{
+    display: none;
+  }
+
+  #link_content{
+    display: inline-block;
+  }
+
+
+  }
+  
+
+
+
+
 *{
     font-family: kosugi, Arial;  
 

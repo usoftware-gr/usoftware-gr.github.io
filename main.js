@@ -1,5 +1,11 @@
+link_content.innerHTML = '<li id="no_1">Products</li><li id="no_2">information</li><li></li>';
+link_content_menu.innerHTML = '<ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="https://ku-daa.web.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a style="color: rgb(0, 0, 0);" href="https://uzuber.f5.si"><li style="/*! float: left; */padding-right: 20px;">ブログ</li></a><a href="http://umaidango.y.ribbon.to/bbs/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="https://share-tool.vercel.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a></ul>';
+
+
 const header = document.querySelector('#header_content');
 const header_sc = document.querySelector('#header_sc');
+
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     header.style.display = 'none';
@@ -56,8 +62,6 @@ allLinks.forEach(link => {
 });
 }
 
-link_content_menu = document.getElementById("link_content_menu");
-link_content_menu.innerHTML = '<ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="/about.html"><li style="/*! float: left; */padding-right: 20px;">U Softwareについて</li></a><a href="/products.html"><li style="/*! float: left; */padding-right: 20px;">製品</li></a><a href="https://ku-daa.web.app/"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a href="/blog/"><li style="/*! float: left; */padding-right: 20px;">ブログ</li></a><a href="http://umaidango.y.ribbon.to/bbs/"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="/character.html"><li style="padding-right: 20px;">キャラクター</li></a><a href="/kabegami/"><li style="/*! float: left; */padding-right: 20px;">壁紙</li></a><a href="/dic/"><li style="/*! float: left; */padding-right: 20px;">だんご大百科</li></a><a href="/hamster/"><li style="/*! float: left; */padding-right: 20px;">ハムスター日記</li></a><a href="/me/"><li style="/*! float: left; */padding-right: 20px;">うまいだんごのブログ</li></a><a href="/web-styles/"><li style="/*! float: left; */padding-right: 20px;">Web Styles</li></a><a href="/chipi-audio/"><li style="/*! float: left; */padding-right: 20px;">Chipi Audio</li></a><a href="https://share-tool.vercel.app/"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a></ul>';
 
 
 function open_menu() {
