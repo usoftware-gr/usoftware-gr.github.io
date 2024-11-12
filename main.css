@@ -37,8 +37,10 @@ span li{
   box-shadow: 0px 0px 4px 0px #ddd;
   border-radius: 20px;
   background: #fff;
-  margin-top: 0px;
+  margin-top: -8px;
   animation: 0.2s upto_0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   
 }
 
@@ -75,12 +77,7 @@ span li{
 }
 
 
-li:hover{
-    background: #3333331a;
-    
-    border-radius: 10px;
-    
-}
+
 
 li:active{
     background: #1414143a;
@@ -191,3 +188,20 @@ a{
             transform: translateX(-100%);
           }   
 }
+
+#logo_img{
+  display: inline-block;
+}
+
+
+#p_menu{
+  padding: 55px;
+  position: fixed;
+  top: 98px;
+  left: 138px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+  border-radius: 10px;
+  background: #fff;z-index: 5;
+  width: 500px;height: 195px;
+}
+
