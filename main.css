@@ -81,7 +81,7 @@ span li{
   animation: 0.2s upto_0;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
-  
+  z-index: 4;
 }
 
 @keyframes upto_0 {
@@ -258,4 +258,115 @@ a{
   z-index: 5;
   width: 500px;
   height: 195px;
+}
+
+#menu_svg img{
+  vertical-align: 38%;
+  margin-left: 20px;
+  height: 28px;
+}
+
+
+
+@keyframes slide_product_left_right {
+  0%{
+    left: 0%;
+    transform: translateX(-100%);
+    top: 358px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 358px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide_product_left_right_1 {
+  0%{
+    left: 0%;
+    
+    top: 275px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 30%;
+
+    top: 275px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide_product_top {
+  0%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 198px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 358px;
+    opacity: 1;
+  }
+}
+
+#picup_img_0{
+  background-image: url(img/top.png);
+  background-size: 399px;
+  width: 399px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 358px;
+  z-index: 1;
+  animation: slide_product_left_right 0.8s;
+
+}
+
+#picup_img_1{
+  background: #fff;
+  background-size: 399px;
+  width: 399px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 358px;
+  z-index: 0;
+  padding: 3px 52px 4px 22px;
+  border-radius: 10px;
+  animation: slide_product_top 0.8s;
+  animation-duration: 1.25s;
+}
+
+#picup{
+  background-image: linear-gradient(-33deg, rgb(196, 182, 197), rgb(35, 117, 163));
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#picup_logo_0{
+  font-family: Calibri, Noto Sans JP;
+  font-size: 42px;
+  position: absolute;
+  color: #a4ddec;
+  user-select: none;
+  left: 30%;
+  transform: translateX(-30%);
+  top: 275px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2px 20px 2px 20px;
+  animation: slide_product_left_right_1 0.8s;
+  animation-duration: 3s;
 }
