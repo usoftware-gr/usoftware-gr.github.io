@@ -1,6 +1,3 @@
-link_content.innerHTML = '<li id="no_1">Products</li><li id="no_2">information</li><li></li>';
-link_content_menu.innerHTML = '<ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="https://ku-daa.web.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a style="color: rgb(0, 0, 0);" href="https://uzuber.f5.si"><li style="/*! float: left; */padding-right: 20px;">ブログ</li></a><a href="http://umaidango.y.ribbon.to/bbs/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="https://share-tool.vercel.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a></ul>';
-
 
 const header = document.querySelector('#header_content');
 const header_sc = document.querySelector('#header_sc');
@@ -176,4 +173,7 @@ setTimeout(() => {
 }, 800)
 
 
+
+link_content.innerHTML = '<li id="no_1">Products</li><li id="no_2">information</li><li></li>';
+link_content_menu.innerHTML = '<ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="https://ku-daa.web.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a style="color: rgb(0, 0, 0);" href="https://uzuber.f5.si"><li style="/*! float: left; */padding-right: 20px;">ブログ</li></a><a href="http://umaidango.y.ribbon.to/bbs/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="https://share-tool.vercel.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a></ul>';
 
