@@ -6,9 +6,144 @@
   <link rel="stylesheet" type="text/css" href="https://usoftware-gr.github.io/main.css">
   <link rel="stylesheet" type="text/css" href="https://usoftware-gr.github.io/fonts.css"><link rel="stylesheet" type="text/css" href="https://usoftware-gr.github.io/slider.css">
   <style>
-    .rinen{
+
+    .about_main{
+      text-align: center;
+    }
+    .space{
+      height: 6vh;
+    }
+    #rinen{
       font-size: 1.8rem;
       font-weight: 500;
+    }
+
+    .box{
+      border-radius: 12px;
+      border: 1px #eee solid;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px 0px 30px 0px;
+
+    }
+
+    .silicon
+    {
+      border-radius: 50%;
+      padding: 20px;
+      display: inline-block;
+      background: #5ac1ff;
+    }
+
+    .silicon2{
+      border-radius: 50%;
+      padding: 20px;
+      display: inline-block;
+      background: #aaff65;
+    }
+
+
+    .history-border{
+      width: 64px;
+      height: 5px;  
+      background: #5ac1ff;
+      display: inline-block;
+      margin-bottom: 18px;
+      margin-left:-25px;
+      border-radius: 5000px;
+      animation: 0.8s border-slides;
+      
+    }
+
+    .member-border{
+      width: 64px;
+      height: 5px;  
+      background: #aaff65;
+      display: inline-block;
+      margin-bottom: 18px;
+      margin-left:-25px;
+      border-radius: 5000px;
+      animation: 0.8s border-slides;
+      
+    }
+    .history-text{
+      font-size: 1.8rem;
+      font-weight: 450;
+      vertical-align: 30%;
+      margin-left: 10px;
+        }
+
+        .name-text{
+      font-size: 1.8rem;
+      font-weight: 450;
+      vertical-align: 30%;
+      margin-left: 10px;
+        }
+    
+    .history-tosi
+    {
+      font-size: 1.2rem;
+      vertical-align: 51%;
+      margin: 18px;
+      display: inline-block;
+        }
+
+    .syoku
+    {
+      font-size: 1.2rem;
+      vertical-align: 51%;
+      margin: 18px;
+      display: inline-block;
+        }
+
+    .history-page-border{
+      text-align: left;     
+      margin: 15px; 
+    }
+
+    .member-page-border{
+      text-align: left;     
+      margin: 15px; 
+    }
+
+    @keyframes border-slides {
+      0%{
+        width: 0px;
+      }
+
+      25%{
+        width: 20px;
+      }
+
+      50%{
+        width: 48px;
+      }
+
+      100%{
+        width: 64px;
+      }
+    }
+
+
+    #top{
+      background: #fff;
+      background-size: 1500px;
+      background-repeat: no-repeat;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+
+    }
+
+    #top div{
+      padding: 48px;
+      background-image: url(img/tw-header.png);
+      background-size: 1500px;
+      background-repeat: no-repeat;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
   </style>
 
@@ -21,7 +156,7 @@
       <div id="header_content" style="background: rgb(255, 255, 255); display: block;">
         <div id="logo" onclick="open_menu()">
           <span id="menu_svg"><svg width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="25px" style="vertical-align: 38%;margin-left: 20px; height:28px;"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <path d="M1 12C1 11.4477 1.44772 11 2 11H22C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13H2C1.44772 13 1 12.5523 1 12Z" fill="#0F0F0F"></path> <path d="M1 4C1 3.44772 1.44772 3 2 3H22C22.5523 3 23 3.44772 23 4C23 4.55228 22.5523 5 22 5H2C1.44772 5 1 4.55228 1 4Z" fill="#0F0F0F"></path> <path d="M1 20C1 19.4477 1.44772 19 2 19H22C22.5523 19 23 19.4477 23 20C23 20.5523 22.5523 21 22 21H2C1.44772 21 1 20.5523 1 20Z" fill="#0F0F0F"></path> </g></svg></span>
-          <span id="logo_img"><img src="/img/logo.svg"></span>
+          <span id="logo_img"><img src="img/logo.svg"></span>
         </div>
         
       </div><div style="display: none; color: rgb(0, 0, 0);" id="header_sc">
@@ -51,47 +186,203 @@
 <div id="con">
   <div id="content">
       <div style="height:10vh;"></div>
-<div style="margin: 0 auto;text-align: center;">
+<div style="background: #fff;background-size: 1500px;background-repeat: no-repeat;width: 100%;box-sizing: border-box;margin: 0 auto;text-align: center;">
 
+  <div style="padding: 48px;background-image: url(img/tw-header.png);background-size: 1500px;background-repeat: no-repeat;width: 100%;box-sizing: border-box;margin: 0 auto;">
   <p>
-<h1 style="font-size: 2.8rem;">
-  U Software Groupについて
-</h1>
-<h2>
-  About U Software Group
-</h2>
-</p>
-
-<div class="about_main">
-
-  <div class="page1" id="pc_select01">
-    <div style="height:5vh;"></div>
-    <span class="rinen">
-      U Softwareはだれもが平等に使える便利なソフトウェア・サービスをつくることです。
-    </span>
-    <h3>U Software Groupの情報</h3>
-    <a href="/mission.html">
-    <h1 style="text-align: left;margin-left: 20%;">
-      <div style="display: inline-block;width: 8px;height: 50px;background: #5ac1ff;margin-right: 20px;vertical-align: -23%;"></div>
-      Mission
-    </h1>
-  </a>
-
-  <a href="/terms.html">
-    <h1 style="text-align: left;margin-left: 20%;">
-      <div style="display: inline-block;width: 8px;height: 50px;background: #5ac1ff;margin-right: 20px;vertical-align: -23%;"></div>
-      規約・ライセンス
-    </h1>
-  </a>
-  </div>
+  </p><h1 style="color:#000;font-size: 2.8rem;text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 0px 1px 0 #FFF, 0-1px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF;">
+    U Software Groupについて
+  </h1>
+  <h2 style="color:#000;text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px -1px 0 #FFF, 0px 1px 0 #FFF, 0-1px 0 #FFF, -1px 0 0 #FFF, 1px 0 0 #FFF;">
+    About U Software Group
+  </h2>
+  <p></p>
 
 </div>
+  
 
 
 </div>
 
+  <div class="about_main">
+
+    <div class="page1" id="pc_select01">
+      <div style="height:5vh;"></div>
+      <span id="rinen">
+        U Softwareはだれもが平等に使える便利なソフトウェア・サービスをつくることです。
+      </span>
+
+      <div class="box">
+      <h3>information</h3>
+      <a href="/mission.html" style="color: rgb(0, 0, 0);">
+      <h1 style="text-align: left;margin-left: 20%;">
+        <div style="display: inline-block;width: 8px;height: 50px;background: #5ac1ff;margin-right: 20px;vertical-align: -23%;"></div>
+        Mission
+      </h1>
+    </a>
+
+    <a href="/terms.html" style="color: rgb(0, 0, 0);">
+      <h1 style="text-align: left;margin-left: 20%;">
+        <div style="display: inline-block;width: 8px;height: 50px;background: #5ac1ff;margin-right: 20px;vertical-align: -23%;"></div>
+        規約・ライセンス
+      </h1>
+    </a>
   </div>
 
+<div class="space"></div>
+
+<div class="page1" id="pc_select02">
+  
+  <div class="box">
+    <h3>history</h3>
+
+    <div style="display: flex;">
+      <div>
+      <span class="history-tosi">2023年6月</span>
+      <br>
+      <span class="history-tosi">2024年1月</span>
+      <br>
+      <span class="history-tosi">2024年3月</span>
+      <br>
+      <span class="history-tosi">2024年5月</span>
+      <br>
+      <span class="history-tosi">2024年5月</span>
+      <br>
+      <span class="history-tosi">2024年10月</span>
+      <br>
+    </div>
+        
+      <div>
+              <div class="history-page-border">
+                
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">設立</span>
+              </div>
+      
+              
+              <div class="history-page-border">
+                
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">Original Clockを公開</span>
+              </div>
+              
+              
+              <div class="history-page-border">
+                
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">MY Widgetを公開</span>
+              </div>
+              
+              <div class="history-page-border">
+                
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">Kabegami Downloadのサービスが始まる</span>
+              </div>
+              
+              <div class="history-page-border">
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">チピ掲示板をリリース</span>
+              </div>
+              
+              <div class="history-page-border">
+                
+                <span class="silicon"></span>
+                <span class="history-border"></span>
+                <span class="history-text">Fox Code Editorを公開</span>
+              </div>
+            </div></div>
+          </div></div>
+
+
+          <div class="page1" id="pc_select02">
+            <div class="space"></div>
+            <div class="box">
+              <h3>members</h3>
+          <div style="display: flex;">
+                          <div>
+                <span class="syoku">社長</span>
+                <br>
+                <span class="syoku">副社長</span>
+                <br>
+                <span class="syoku">社員</span>
+                <br>
+                <span class="syoku">社員</span>
+                <br>
+                <span class="syoku">ウェブエンジニア</span>
+                <br>
+                <span class="syoku">ウェブエンジニア</span>
+                <br>
+                <span class="syoku">ウェブエンジニア</span>
+                <br>
+              </div>
+
+              <div>
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">ぷりん</span>
+                </div>
+
+                
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">うまいだんご</span>
+                </div>
+
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">いちご</span>
+                </div>
+
+                
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">かいと</span>
+                </div>
+                
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">ウェブ完理</span>
+                </div>
+                
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">RainKasa</span>
+                </div>
+
+
+                <div class="member-page-border">
+                  
+                  <span class="silicon2"></span>
+                  <span class="member-border"></span>
+                  <span class="name-text">Matsunoki</span>
+                </div>
+
+
+     
+
+
+            </div>
+
+                        </div></div>
+                    </div></div>
+          
   
   <div id="mobile_content">
   
@@ -108,13 +399,11 @@
 
   <div style="display: none; background: rgb(255, 255, 255); animation: 0.3s downup-anime;" id="menu">
 
-    <div id="link_content_menu"><ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="https://ku-daa.web.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a style="color: rgb(0, 0, 0);" href="https://uzuber.f5.si"><li style="/*! float: left; */padding-right: 20px;">ブログ</li></a><a href="http://umaidango.y.ribbon.to/bbs/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="https://share-tool.vercel.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a></ul></div>
+    <div id="link_content_menu"><ul style="list-style: none;/*! text-align: center; *//*! display: inline-block; */vertical-align: -20%;"><a href="/index.html" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ホーム</li></a><a href="https://ku-daa.web.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">ソフトウェアラインナップ</li></a><a style="color: rgb(0, 0, 0);" href="https://uzuber.f5.si"><li style="/*! float: left; */padding-right: 20px;">ユーズバー（ブログ）</li></a><a href="http://umaidango.y.ribbon.to/bbs/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">掲示板</li></a><a href="https://share-tool.vercel.app/" style="color: rgb(0, 0, 0);"><li style="/*! float: left; */padding-right: 20px;">共有ツール</li></a><a style="color: rgb(0, 0, 0);" href="https://umaidango.github.io/kabegami/"><li style="/*! float: left; */padding-right: 20px;">壁紙</li></a><a style="color: rgb(0, 0, 0);" href="/about.html"><li style="/*! float: left; */padding-right: 20px;">U Softwareについて</li></a><a style="color: rgb(0, 0, 0);" href="https://cha-sheet.web.app"><li style="/*! float: left; */padding-right: 20px;">チャレンジシート</li></a><a style="color: rgb(0, 0, 0);" href="/products.html"><li style="/*! float: left; */padding-right: 20px;">プロダクト</li></a><li style="margin-top: 20px;margin-bottom: -24px;">© 2024 - U Software Group</li></ul></div>
 </div>
 
 <script src="https://usoftware-gr.github.io/main.js"></script><script src="https://usoftware-gr.github.io/main_2.js"></script>
 
- 
 
 
-
-</body></html>
+</div></div></body></html>
