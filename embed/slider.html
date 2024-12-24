@@ -345,8 +345,8 @@ a{
 
     <div id="content">
 
-        <div>
-
+        <div id="slider_img_main">
+            
         </div>
         <button onclick="left_img()">left</button>
 
@@ -355,13 +355,30 @@ a{
 
   </body>
   <script>
-    let dore = 0;
+    let dore = 1;
     let img = [1, 2, 3, 4, 5];
 
     function left_img() {
         const kazu = dore;
-        dore = (dore + 1) % img.length; // ここで配列の要素数で剰余を取る
-        console.log(img[kazu]);
+        dore = (dore + 1) % img.length;
+
+        switch (img[kazu]) {
+            case 1:
+                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/original_clock_h.jpg">';
+                break;
+            case 2:
+                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/wefk302d.jpg">';
+                break;
+            case 3:
+                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/fce.jpg">';
+                break;
+            case 4:
+                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/fce_ad.png">';
+                break;
+            case 5:
+                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/tw-header.png">';
+                break;
+        }
     }
   </script>
   </html>
