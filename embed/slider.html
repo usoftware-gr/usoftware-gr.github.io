@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
     <link rel="shortcut icon" href="https://usoftware-gr.github.io/img/favicon.ico" sizes="64x64"><!--favicon-->
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title>U Software Group</title>
@@ -49,6 +48,26 @@ span li{
     z-index: 4;
     padding-left: 10px;
     margin-left: -5px;
+}
+
+@keyframes slider_right {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slider_left {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 @keyframes upto_0 {
@@ -339,7 +358,11 @@ a{
 }
 
 #slider_img_main img{
-    width: 80%;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    display: inherit;
 }
     </style>
     <link rel="stylesheet" type="text/css" href="https://usoftware-gr.github.io/fonts.css">
@@ -349,39 +372,79 @@ a{
 
     <div id="content">
 
-        <div id="slider_img_main">
-            
-        </div>
-        <button onclick="left_img()">left</button>
+        <div id="slider_img_main" style=""><img id="slider_img" src="https://usoftware-gr.github.io/img/original_clock_h.jpg" style="animation: 0.5s slider_right;"></div>
+        <button onclick="left_img()" style="border: none;background: transparent;width: 75px;height: 75px;top: 105px;position: absolute;left: 50px;cursor: pointer;">
+<svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+</button><button style="border: none;background: transparent;width: 75px;height: 75px;top: 105px;position: absolute;right: 50px;cursor: pointer;" onclick="right_img()">
+<svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+</button>
 
     </div>
 
-  </body>
+  
   <script>
     let dore = 1;
-    let img = [1, 2, 3, 4, 5];
+    let img = [1, 2, 3, 4];
 
     function left_img() {
+        const kazu = dore;
+
+        dore = (dore - 1) % img.length;
+    
+    
+    if(dore == 0)
+    {
+        slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/tw-header.png">';
+        slider_img.style = 'animation: 0.5s slider_right'; 
+    }
+        
+
+
+        switch (img[kazu]) {
+            case 1:
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/original_clock_h.jpg">';
+                slider_img.style = 'animation: 0.5s slider_right';
+                break;
+            case 2:
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/wefk302d.jpg">';
+                slider_img.style = 'animation: 0.5s slider_right';
+                break;
+            case 3:
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/fce.jpg">';
+                slider_img.style = 'animation: 0.5s slider_right';
+                break;
+
+            case 4:
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/tw-header.png">';
+                slider_img.style = 'animation: 0.5s slider_right';
+                break;
+        }
+    }
+
+    
+    function right_img() {
         const kazu = dore;
         dore = (dore + 1) % img.length;
 
         switch (img[kazu]) {
             case 1:
-                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/original_clock_h.jpg">';
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/original_clock_h.jpg">';
+                slider_img.style = 'animation: 0.5s slider_left';
                 break;
             case 2:
-                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/wefk302d.jpg">';
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/wefk302d.jpg">';
+                slider_img.style = 'animation: 0.5s slider_left';
                 break;
             case 3:
-                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/fce.jpg">';
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/fce.jpg">';
+                slider_img.style = 'animation: 0.5s slider_left';
                 break;
+
             case 4:
-                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/fce_ad.png">';
-                break;
-            case 5:
-                slider_img_main.innerHTML = '<img src="https://usoftware-gr.github.io/img/tw-header.png">';
+                slider_img_main.innerHTML = '<img id="slider_img" src="https://usoftware-gr.github.io/img/tw-header.png">';
+                slider_img.style = 'animation: 0.5s slider_left';
                 break;
         }
     }
   </script>
-  </html>
+  </body></html>
