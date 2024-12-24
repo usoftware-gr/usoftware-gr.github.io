@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="https://usoftware-gr.github.io/img/favicon.ico" sizes="64x64"><!--favicon-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>U Software Group</title>
+    <style>
+        
+*{
+    font-family: Roboto, Noto Sans JP, Arial;  
+
+}
+span ul{
+    list-style: none;
+    display: inline-block;
+}
+span li{
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: 32%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px 8px;
+}
+#header_content img{
+    margin-left: 10px;
+    height: 42px;
+}
+
+#header_content{
+  margin: 0px;
+  padding-top: 6px;
+}
+
+#header_sc img{
+    margin-left: 10px;
+    height: 42px;
+}
+
+#header_sc{
+    margin: 0px;
+    padding-top: 6px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 4px 0px #ddd;
+    background: #fff;
+    margin-top: -8px;
+    animation: 0.2s upto_0;
+    z-index: 4;
+    padding-left: 10px;
+    margin-left: -5px;
+}
+
+@keyframes upto_0 {
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes downup_0 {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+#logo_img:hover{
+    background: #3333331a;
+    
+    border-radius: 10px;
+}
+
+#logo_img:active{
+    background: #1414143a;
+    
+    border-radius: 10px;
+}
+
+
+
+
+li:active{
+    background: #1414143a;
+    
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#color_mode_select{
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #87edff;
+    animation:
+      l20-1 0.8s infinite linear alternate,
+      l20-2 1.6s infinite linear;
+  }
+  @keyframes l20-1{
+     0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+     12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+     25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+     50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+     100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+  }
+  @keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
+
+    
+  }
+  
+
+#splash{
+    width: 100%;
+    height: 100vh;
+    
+}
+
+#logo{
+  display: inline-block;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+#logo:hover{
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #ddd;
+    background: #ffffff1a;
+    padding-top: 5px;
+    padding-right: 12px;
+    cursor: pointer;
+  }
+  
+
+
+
+#menu{
+  position: fixed;
+  padding: 32px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+  border-radius: 10px;
+  top: 78px;
+  z-index: 4;
+}
+
+@keyframes updown-anime {
+    0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    
+  
+    @keyframes downup-anime {
+        0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }   
+}
+
+#logo_img{
+  display: inline-block;
+}
+
+
+#p_menu{
+  padding: 55px;
+  position: fixed;
+  top: 98px;
+  left: 138px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+  border-radius: 10px;
+  background: #fff;z-index: 5;
+  width: 500px;height: 195px;
+}
+
+
+
+#info_menu{
+  padding: 55px;
+  position: fixed;
+  top: 98px;
+  left: 138px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+  border-radius: 10px;
+  background: #fff;
+  z-index: 5;
+  width: 500px;
+  height: 195px;
+}
+
+#menu_svg img{
+  vertical-align: 38%;
+  margin-left: 20px;
+  height: 28px;
+}
+
+
+
+@keyframes slide_product_left_right {
+  0%{
+    left: 0%;
+    transform: translateX(-100%);
+    top: 358px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 358px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide_product_left_right_1 {
+  0%{
+    left: 0%;
+    
+    top: 275px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 30%;
+
+    top: 275px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide_product_top {
+  0%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 198px;
+    opacity: 0;
+  }
+
+  100%{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 358px;
+    opacity: 1;
+  }
+}
+
+#picup_img_0{
+  background-image: url(img/top.png);
+  background-size: 399px;
+  width: 399px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 358px;
+  z-index: 1;
+  animation: slide_product_left_right 0.8s;
+
+}
+
+#picup_img_1{
+  background: #fff;
+  background-size: 399px;
+  width: 399px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 358px;
+  z-index: 0;
+  padding: 3px 52px 4px 22px;
+  border-radius: 10px;
+  animation: slide_product_top 0.8s;
+  animation-duration: 1.25s;
+}
+
+#picup{
+  background-image: linear-gradient(-33deg, rgb(196, 182, 197), rgb(35, 117, 163));
+  border-radius: 10px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#picup_logo_0{
+  font-family: Calibri, Noto Sans JP;
+  font-size: 42px;
+  position: absolute;
+  color: #a4ddec;
+  user-select: none;
+  left: 30%;
+  transform: translateX(-30%);
+  top: 275px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2px 20px 2px 20px;
+  animation: slide_product_left_right_1 0.8s;
+  animation-duration: 3s;
+}
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://usoftware-gr.github.io/fonts.css">
+  </head>
+
+  <body>
+
+    <div id="content">
+
+        <div>
+
+        </div>
+        <button onclick="left_img()">left</button>
+
+        <span id="point"></span>
+    </div>
+
+  </body>
+  <script>
+    let dore = 0;
+    let img = [1, 2, 3, 4, 5];
+
+    function left_img() {
+        const kazu = dore;
+        dore = (dore + 1) % img.length; // ここで配列の要素数で剰余を取る
+        console.log(img[kazu]);
+    }
+  </script>
+  </html>
