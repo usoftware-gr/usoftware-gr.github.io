@@ -392,72 +392,30 @@ animation-duration: 3s;
 
 
 <script>
-  let dore = 1;
-  let img = [1, 2, 3];
+let dore = 0; // 初期値を0に変更 (配列のインデックスに合わせる)
+const img = [img1, img2, img3]; // 画像要素の配列
 
-  function left_img() {
-      const kazu = dore;
+function update_img(isRight) {
+    // すべての画像を非表示にする
+    for (const image of img) {
+        image.style.display = 'none';
+    }
 
-      dore = (dore - 1) % img.length;
-  
-      
+    // 現在の画像を表示
+    img[dore].style.display = 'block';
 
+    // アニメーションを適用
+    slider_img.style.animation = `0.5s ${isRight ? 'slider_left' : 'slider_right'}`;
+}
 
-      switch (img[kazu]) {
-          case 1:
-              img1.style.display = 'block';
-              img2.style.display = 'none';
-              img3.style.display = 'none';
+function left_img() {
+    dore = (dore - 1 + img.length) % img.length;
+    update_img(false); // 左移動
+}
 
-
-              slider_img.style = 'animation: 0.5s slider_right'; 
-              break;
-          case 2:
-              img1.style.display = 'none';
-              img2.style.display = 'block';
-              img3.style.display = 'none';
-
-
-              slider_img.style = 'animation: 0.5s slider_right'; 
-              break;
-          case 3:
-              img1.style.display = 'none';
-              img2.style.display = 'none';
-              img3.style.display = 'block';
-
-
-              slider_img.style = 'animation: 0.5s slider_right'; 
-      }
-  }
-
-  
-  function right_img() {
-      const kazu = dore;
-      dore = (dore + 1) % img.length;
-
-      switch (img[kazu]) {
-          case 1:
-              img1.style.display = 'block';
-              img2.style.display = 'none';
-              img3.style.display = 'none';
-
-              slider_img.style = 'animation: 0.5s slider_left'; 
-              break;
-          case 2:
-              img1.style.display = 'none';
-              img2.style.display = 'block';
-              img3.style.display = 'none';
-
-              slider_img.style = 'animation: 0.5s slider_left'; 
-              break;
-          case 3:
-              img1.style.display = 'none';
-              img2.style.display = 'none';
-              img3.style.display = 'block';
-
-              slider_img.style = 'animation: 0.5s slider_left'; 
-
-      }
-  }
+function right_img() {
+    dore = (dore + 1) % img.length;
+    update_img(true); // 右移動
+}
 </script>
 </body></html>
