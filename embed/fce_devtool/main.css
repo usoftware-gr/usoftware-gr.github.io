@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+*{
+    font-family: "Nunito Sans", "Noto Sans JP";
+}
+
+#logo img{
+    height: 48px;
+}
+
+span svg{
+    height: 32px;
+    width: 32px;
+    vertical-align: -10%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+span svg:hover{
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+
+span svg:active{
+    background: #bdbdbd;
+    border-radius: 50%;
+}
+
+
+nav div{
+    margin: -8px;
+    padding: 7px 7px 7px 15px;
+    width: 100%;
+    position: fixed;
+}
+
+#menu{
+    position: fixed;
+    padding: 25px;
+    top: 115px;
+    z-index: 4;
+    border: 1px #eee solid;
+    width: 30%;
+    max-width: 220px;
+    left: 15px;
+    border-radius: 20px;
+}
+
+
+#menu_cotnent ul,li{
+    list-style: none;
+    padding: 5px;
+    margin-left: -20px;
+}
+
+li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.4rem;
+    
+}
+
+@keyframes updown-anime {
+    0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    
+  
+    @keyframes downup-anime {
+        0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }   
+}
+
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+  
+  details[open] {
+    padding: 0.5em;
+
+  }
+
+textarea{
+    height: 195px;
+    width: 295px;
+    border: none;
+    resize: none;
+}
+
+.box{
+    display: inline-block;
+    margin: 15px;
+}
