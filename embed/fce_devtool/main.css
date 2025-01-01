@@ -3,6 +3,7 @@
 
 *{
     font-family: "Nunito Sans", "Noto Sans JP";
+    scroll-behavior: smooth;
 }
 
 #logo img{
@@ -153,3 +154,5 @@ button:hover{
     color: #fff;
     cursor: pointer;
 }
+
+
