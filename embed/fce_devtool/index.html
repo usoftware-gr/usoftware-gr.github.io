@@ -1,79 +1,151 @@
 <!DOCTYPE HTML>
-<html>
-    <head>
-        <title>devtool</title>
-        <link rel="shortcut icon" href="favicon.png" sizes="64x64"><!--favicon-->
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="stylesheet" type="text/css" href="design.css">
-            
-    </head>
-    <body id="index">
-        <nav>
-            <div id="header">
-                <span onclick="menu_click()">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                </span>
-                <span id="logo"><img src="logo.png"></span>
+<html><head>
+    <title>devtool</title>
+    <link rel="shortcut icon" href="favicon.png" sizes="64x64"><!--favicon-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="design.css">
+        
+</head>
+<body id="index">
+    <nav>
+        <div id="header" style="z-index: 4; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; width: 130px; border-radius: 15px; margin: 10px; animation: 0.3s updown-anime;">
+            <span onclick="menu_click()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </span>
+            <span id="logo"><img src="favicon.png"></span>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div style="height: 2vh"></div>
+        <div style="margin-left: 8%;" id="page01">
+            <div style="height: 10vh;"></div>
+            <h2>Box design</h2>
+            <div class="box">
+                <div class="box_d_00">
+                    <span>
+                        <div style="width: 200px;" class="box_d_01">box design 1</div>
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+ 
+
+<button onclick="box_d_01.show()">Source</button>
+
+<dialog id="box_d_01">
+<div style="display: flex;">
+  <textarea id="tb_box_d_01">.box_d_01{
+border-radius: 8px;
+border: 1px #eee solid;
+padding: 15px;
+box-shadow: 0px 0px 4px 0px #ddd;
+display: inline-block;
+}
+  </textarea>
+
+  <div style="width: 150px;">
+<span id="tb_box_d_01_copy" onclick="navigator.clipboard.writeText(tb_box_d_01.textContent); tb_box_d_01_copy.innerHTML += 'コピー済み！';"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8C21 6.34315 19.6569 5 18 5H10C8.34315 5 7 6.34315 7 8V20C7 21.6569 8.34315 23 10 23H18C19.6569 23 21 21.6569 21 20V8ZM19 8C19 7.44772 18.5523 7 18 7H10C9.44772 7 9 7.44772 9 8V20C9 20.5523 9.44772 21 10 21H18C18.5523 21 19 20.5523 19 20V8Z" fill="#0F0F0F"></path> <path d="M6 3H16C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1H6C4.34315 1 3 2.34315 3 4V18C3 18.5523 3.44772 19 4 19C4.55228 19 5 18.5523 5 18V4C5 3.44772 5.44772 3 6 3Z" fill="#0F0F0F"></path> </g></svg>コピー済み！</span>
+</div>
+</div>
+
+<span class="close_btn" onclick="box_d_01.close()">✕</span>
+</dialog>
+
+                    </span>
+                </div>
+
+                <div class="box_d_00">
+                    <span>
+                        <div style="width: 200px;" class="box_d_02">box design 2</div>
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+                        <button onclick="box_d_02.show();">Source</button>
+<dialog id="box_d_02">
+    <div style="display: flex;">
+<textarea id="tb_box_d_02">.box_d_02{
+border-radius: 8px;
+border: 4px #eee doted;
+padding: 15px;
+box-shadow: 0px 0px 4px 0px #ddd;
+display: inline-block;
+}                                   
+                            </textarea>
+                            <div style="width: 150px;">
+<span id="tb_box_d_02_copy" onclick="navigator.clipboard.writeText(tb_box_d_02.textContent); tb_box_d_02_copy.innerHTML += 'コピー済み！';"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8C21 6.34315 19.6569 5 18 5H10C8.34315 5 7 6.34315 7 8V20C7 21.6569 8.34315 23 10 23H18C19.6569 23 21 21.6569 21 20V8ZM19 8C19 7.44772 18.5523 7 18 7H10C9.44772 7 9 7.44772 9 8V20C9 20.5523 9.44772 21 10 21H18C18.5523 21 19 20.5523 19 20V8Z" fill="#0F0F0F"></path> <path d="M6 3H16C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1H6C4.34315 1 3 2.34315 3 4V18C3 18.5523 3.44772 19 4 19C4.55228 19 5 18.5523 5 18V4C5 3.44772 5.44772 3 6 3Z" fill="#0F0F0F"></path> </g></svg>コピー済み！</span>
+</div>
+
+</div>
+
+
+<span class="close_btn" onclick="box_d_02.close()">✕</span>
+</dialog>                              
+                    </span>
+                </div>
             </div>
-        </nav>
+        </div><div style="margin-left: 8%;" id="page02">
+            <div style="height: 10vh;"></div>
+            <h2>Button design</h2>
+            <div class="box">
+                <div class="box_d_00">
+                    <span>
+                        <button class="bt_01" style="padding: 12px 42px;font-size: 18px;">Button design 1</button>
+                    </span>
+                    <br>
+                    <br>
+                    <span>
+ 
 
-        <div id="content">
-            <div style="height: 2vh"></div>
-            <div style="margin-left: 8%;" id="page01">
-                <div style="height: 10vh;"></div>
-                <h2>Box design</h2>
-                <div class="box">
-                    <div class="box_d_00">
-                        <span>
-                            <div style="width: 200px;" class="box_d_01">box design 1</div>
-                        </span>
-                        <span>
-                            <details>
-                                <summary>Source</summary>
-                                <textarea>
-                                    .box_d_01{
-                                        border-radius: 8px;
-                                        border: 1px #eee solid;
-                                        padding: 15px;
-                                        box-shadow: 0px 0px 4px 0px #ddd;
-                                        display: inline-block;
-                                    }
-                                </textarea>
-                              </details>                              
-                        </span>
-                    </div>
+<button onclick="bt_d_01.show()">Source</button>
 
-                    <div class="box_d_00">
-                        <span>
-                            <div style="width: 200px;" class="box_d_02">box design 2</div>
-                        </span>
-                        <span>
-                            <details>
-                                <summary>Source</summary>
-                                <textarea>
-                                    .box_d_02{
-                                        border-radius: 8px;
-                                        border: 4px #eee doted;
-                                        padding: 15px;
-                                        box-shadow: 0px 0px 4px 0px #ddd;                                        display: inline-block;
-                                        }                                   
-                                </textarea>
-                              </details>                              
-                        </span>
-                    </div>
+<dialog id="bt_d_01">
+<div style="display: flex;">
+  <textarea id="tb_bt_d_01">.bt_d_01{
+    border-radius: 500px;
+    border: none;
+   background: rgb(83, 108, 255);
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 42px;
+    font-size: 18px;
+}
+
+.bt_d_01:hover{
+    border-radius: 500px;
+    border: none;
+    background: rgb(103, 126, 255);
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 42px;
+    font-size: 18px;
+}</textarea>
+
+  <div style="width: 150px;">
+<span onclick="navigator.clipboard.writeText(tb_bt_d_01.textContent); tb_bt_d_01_copy.innerHTML += 'コピー済み！';" id="tb_bt_d_01_copy"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8C21 6.34315 19.6569 5 18 5H10C8.34315 5 7 6.34315 7 8V20C7 21.6569 8.34315 23 10 23H18C19.6569 23 21 21.6569 21 20V8ZM19 8C19 7.44772 18.5523 7 18 7H10C9.44772 7 9 7.44772 9 8V20C9 20.5523 9.44772 21 10 21H18C18.5523 21 19 20.5523 19 20V8Z" fill="#0F0F0F"></path> <path d="M6 3H16C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1H6C4.34315 1 3 2.34315 3 4V18C3 18.5523 3.44772 19 4 19C4.55228 19 5 18.5523 5 18V4C5 3.44772 5.44772 3 6 3Z" fill="#0F0F0F"></path> </g></svg></span>
+</div>
+</div>
+
+<span class="close_btn" onclick="bt_d_01.close()">✕</span>
+</dialog>
+
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div style="display: none; background: rgb(255, 255, 255);" id="menu">
-            <ul id="menu_content">
-                <li><a href="index.html">home</a></li>
-                <li><a href="#page01">box design</a></li>
-            </ul>
-        </div>
+    <div style="display: none; background: rgb(255, 255, 255); animation: 0.3s downup-anime;" id="menu">
+        <ul id="menu_content">
+            <li><a href="index.html">home</a></li>
+            <li><a href="#page01">box design</a></li>
+            <li><a href="#page02">button design</a></li>
+        </ul>
+    </div>
 
 
 
-        <script src="main.js"></script>
-    </body>
-    </html>
+    <script src="main.js"></script>
+
+</body></html>

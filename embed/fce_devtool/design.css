@@ -18,7 +18,27 @@
 
 .box_d_02{
     border-radius: 8px;
-    border: 4px #eee dotted;
+    border: 2px #eee dotted;
     padding: 15px;
     display: inline-block;
+}
+
+.bt_d_01{
+    border-radius: 500px;
+    border: none;
+   background: rgb(83, 108, 255);
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 42px;
+    font-size: 18px;
+}
+
+.bt_d_01:hover{
+    border-radius: 500px;
+    border: none;
+    background: rgb(103, 126, 255);
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 42px;
+    font-size: 18px;
 }
