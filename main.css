@@ -80,7 +80,7 @@ span li{
     animation: 0.2s upto_0;
     z-index: 4;
     padding-left: 10px;
-    margin-left: -5px;
+    margin-left: -8px;
 }
 
 @keyframes upto_0 {
